@@ -19,6 +19,13 @@ export default class PurgeFromJS {
                         1,
                         token.value.length - 1
                     );
+
+                    // this covers Ember's legacy classNameBindings micro-syntax
+                    if (unwrappedString.includes(':')) {
+                      // include full string as well as each chunk between colons
+                      return acc.concat(unwrappedString.split(' ')).concat(unwrappedString.split(':'));
+                    }
+
                     return acc.concat(unwrappedString.split(' ')); // in case if string contains a list of classes
                 } else if (token.type === 'Template') {
                     // cut backticks from the template
