@@ -25,7 +25,7 @@
     "author": "alinaish",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/FullHuman/purgecss-from-js.git"
+        "url": "git+https://github.com/showbie/purgecss-from-js.git"
     },
     "keywords": [
         "purgecss-from",
